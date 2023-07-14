@@ -1,0 +1,55 @@
+.header,.navbar,.article,.sidebar,.advertise,.footer{
+    background-color:antiquewhite;
+    border: 2px solid tomato;
+    border-radius: 5px;
+}
+.header{
+    grid-area: header;
+}
+.article{
+    grid-area: article;
+}
+.navbar{
+    grid-area: navbar;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.advertise{
+    grid-area: advertise;
+}
+.footer{
+    grid-area: footer;
+}
+.container{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header header header header"
+    "navbar article article sidebar"
+    "navbar article article advertise"
+    "footer footer footer footer"
+    ;
+}
+@media screen and (max-width:576px) {
+    .container{
+        grid-template-areas: 
+        "header"
+        "navbar"
+        "article"
+        "sidebar"
+        "advertise"
+        "footer"
+        ;
+    }
+}
+@media screen and (min-width:576px) and (max-width:768px) {
+    .container{
+        grid-template-areas: 
+        "header header header"
+        "navbar navbar navbar"
+        "sidebar article article"
+        "advertise footer footer"
+        ;
+    }
+}
