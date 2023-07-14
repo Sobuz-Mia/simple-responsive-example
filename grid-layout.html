@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Layout</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 100px 200px 100px;
+            grid-template-rows: repeat(3,1fr) 150px ;
+            gap: 10px;
+        }
+        .header{
+            background-color:gold;
+            grid-column: 1/4;
+        }
+        .nav{
+            background-color:gold;
+            grid-row: 2/5;
+        }
+        .article{
+            background-color:gold;
+            grid-row: 2/5;
+        }
+        .sidebar{
+            background-color:gold;
+            grid-row: 2/4;
+        }
+        .advertising{
+            background-color:gold;
+            grid-column: 3/4;
+        }
+        .footer{
+            background-color:gold;
+            grid-column: 1/4;
+            grid-row:5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">The Header </div>
+        <div class="nav">
+            <li><a href="">Nav-1</a></li>
+            <li><a href="">Nav-2</a></li>
+            <li><a href="">Nav-3</a></li>
+        </div>
+        <div class="article">Main article are  </div>
+        <div class="sidebar">Sidebar </div>
+        <div class="advertising">Advertising </div>
+        <div class="footer">The Footer</div>
+    </div>
+</body>
+</html>
